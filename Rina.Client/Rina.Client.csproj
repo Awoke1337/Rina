@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{872B898D-45F5-466C-BB45-38C05DC38053}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Rina.Client</RootNamespace>
+    <AssemblyName>Rina.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Rina.Client.ico</ApplicationIcon>
+    <StartupObject>Rina.Maps.DispatcherRefMap</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DiscordRPC" />
+    <Reference Include="MetroFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="-Module-{10326012-951B-41C3-838C-8151711CDFF8}.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rina\Authentication\ExpressionAnnotationAuth.cs" />
+    <Compile Include="Rina\Authentication\RegistryReader.cs" />
+    <Compile Include="Rina\Client\Annotations\Issuer.cs" />
+    <Compile Include="Rina\Client\Annotations\Process.cs" />
+    <Compile Include="Rina\Client\Attributes\AdvisorConnectionAttribute.cs" />
+    <Compile Include="Rina\Client\Attributes\TestsConnectionAttribute.cs" />
+    <Compile Include="Rina\Client\Classes\MapperWatcherClass.cs" />
+    <Compile Include="Rina\Client\Exceptions\AlgoVisitorException.cs" />
+    <Compile Include="Rina\Client\Exceptions\IdentifierType.cs" />
+    <Compile Include="Rina\Client\Exceptions\OrderVisitorException.cs" />
+    <Compile Include="Rina\Client\Exceptions\Prototype.cs" />
+    <Compile Include="Rina\Client\Exceptions\RoleVisitorException.cs" />
+    <Compile Include="Rina\Client\Licensing\ContainerWatcherLicense.cs" />
+    <Compile Include="Rina\Client\Polices\ConfigurationPolicyPolicy.cs" />
+    <Compile Include="Rina\Client\Polices\ImporterPolicyPolicy.cs" />
+    <Compile Include="Rina\Client\Polices\TagPolicyPolicy.cs" />
+    <Compile Include="Rina\Client\Properties\Resources.cs" />
+    <Compile Include="Rina\Client\Readers\CollectionAuthenticationReader.cs" />
+    <Compile Include="Rina\Client\Readers\ContextAuthenticationReader.cs" />
+    <Compile Include="Rina\Client\Records\TaskInvocationRecord.cs" />
+    <Compile Include="Rina\Client\Roles\ProducerContainerRole.cs" />
+    <Compile Include="Rina\Client\Roles\RegContainerRole.cs" />
+    <Compile Include="Rina\Client\Roles\YesNoNoneErrorEnum.cs" />
+    <Compile Include="Rina\Composer\Policy.cs" />
+    <Compile Include="Rina\Composer\SecureStringVariantType.cs" />
+    <Compile Include="Rina\Composer\SerializerPropertyComp.cs" />
+    <Compile Include="Rina\Composer\StatusRef.cs" />
+    <Compile Include="Rina\Database\MapperRef.cs" />
+    <Compile Include="Rina\Database\Property.cs" />
+    <Compile Include="Rina\Dispatcher\Dispatcher.cs" />
+    <Compile Include="Rina\Dispatcher\Global.cs" />
+    <Compile Include="Rina\Dispatcher\MappingSingletonDispatcher.cs" />
+    <Compile Include="Rina\Instances\ShelvingOptions.cs" />
+    <Compile Include="Rina\Maps\ConfigRefMap.cs" />
+    <Compile Include="Rina\Maps\DispatcherRefMap.cs" />
+    <Compile Include="Rina\Maps\ExporterRefMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rina\Maps\ExporterRefMap.Designer.cs">
+      <DependentUpon>ExporterRefMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rina\Maps\ObjectRefMap.cs" />
+    <Compile Include="Rina\Maps\StubRef.cs" />
+    <Compile Include="Rina\Maps\TagRefMap.cs" />
+    <Compile Include="Rina\Maps\TaskReader.cs" />
+    <Compile Include="Rina\Objects\IdentifierSingletonObject.cs" />
+    <Compile Include="Rina\Objects\MappingRef.cs" />
+    <Compile Include="Rina\Objects\RefSingletonObject.cs" />
+    <Compile Include="Rina\Queues\LossOfScopeAction.cs" />
+    <Compile Include="Rina\Shared\KnownSemanticTypeValues.cs" />
+    <Compile Include="Rina\States\Instance.cs" />
+    <Compile Include="Rina\States\ParserTemplateStatus.cs" />
+    <Compile Include="Rina\States\SIGN.cs" />
+    <Compile Include="Rina\States\UtilsTemplateStatus.cs" />
+    <Compile Include="Rina\Structs\ProductReaderStructBuilder.cs" />
+    <Compile Include="Rina\Structs\StructReaderStructBuilder.cs" />
+    <Compile Include="Rina\Tasks\EventRuleTask.cs" />
+    <Compile Include="Rina\Tasks\HelperRuleTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resources" />
+    <EmbeddedResource Include="Costura\costura\dll.compressed" />
+    <EmbeddedResource Include="Costura\discordrpc\dll.compressed" />
+    <EmbeddedResource Include="Costura\discordrpc\pdb.compressed" />
+    <EmbeddedResource Include="Costura\metroframework\design\dll.compressed" />
+    <EmbeddedResource Include="Costura\metroframework\dll.compressed" />
+    <EmbeddedResource Include="Costura\metroframework\fonts\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\management\infrastructure\dll.compressed" />
+    <EmbeddedResource Include="Costura\newtonsoft\json\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\management\automation\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\security\principal\windows\dll.compressed" />
+    <EmbeddedResource Include="Database.Broadcaster" />
+    <EmbeddedResource Include="Dic.Parser" />
+    <EmbeddedResource Include="Product.State" />
+    <EmbeddedResource Include="Rina.Client.g.resources" />
+    <EmbeddedResource Include="Rina\Client\Properties\Resources.resources" />
+    <EmbeddedResource Include="Rina\Client\Readers\ContextAuthenticationReader.resources" />
+    <EmbeddedResource Include="Rina\Dispatcher\Dispatcher.resources" />
+    <EmbeddedResource Include="Rina\Maps\ExporterRefMap.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
